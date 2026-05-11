@@ -33,7 +33,13 @@ The system produces a clearer park habitat report. The report includes the locat
 **Who Acts on It**  
 A San Jose park volunteer submits the report, but park staff or trained city workers review the AI output before taking action. The AI supports the decision. It does not make the final decision by itself.
 
+**Lab 2's Screenshot:**
 <img width="1331" height="423" alt="Screenshot 2026-05-11 at 12 01 16 AM" src="https://github.com/user-attachments/assets/38939113-247b-4e6e-9764-f30f0b43da6d" />
+
+
+**Lab 3's Screenshot:**
+<img width="1386" height="711" alt="Screenshot 2026-05-11 at 12 30 36 AM" src="https://github.com/user-attachments/assets/8c7a78d6-f66c-445f-b91e-231d528b4a2c" />
+
 
 
 # Failure Case 
