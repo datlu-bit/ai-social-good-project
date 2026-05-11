@@ -22,6 +22,7 @@ The workflow starts when a San Jose park volunteer sees a problem in a park or c
 The AI then processes the input. If the input is text, the AI extracts structured fields such as location, issue type, urgency level, environmental impact, and recommended action. If the input is an image, the AI describes what is visible, identifies possible risks, and suggests a next step.
 
 The output is a clearer park issue report. This report is not meant to make the final decision by itself. Park staff or trained volunteers should review the AI output first. If the output looks accurate, the report can be sent to the right service, such as cleanup, trail repair, tree assessment, invasive plant removal, or erosion control.
+<img width="1331" height="423" alt="Screenshot 2026-05-11 at 12 01 16 AM" src="https://github.com/user-attachments/assets/38939113-247b-4e6e-9764-f30f0b43da6d" />
 
 
 # Failure Case 
