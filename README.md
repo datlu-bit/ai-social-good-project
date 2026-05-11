@@ -17,11 +17,22 @@ Lab 3 uses image recognition. This helps the system analyze a photo of a park or
 
 
 # The workflow
-The workflow starts when a San Jose park volunteer sees a problem in a park or creek trail. The volunteer either writes a short report, uploads a photo, or does both.
+**Input**  
+The park volunteer provides two types of input:  
+1. A short written report about a park or trail issue.  
+2. An optional photo showing the problem, such as trash, illegal dumping, blocked trails, damaged land, or overgrown vegetation.
 
-The AI then processes the input. If the input is text, the AI extracts structured fields such as location, issue type, urgency level, environmental impact, and recommended action. If the input is an image, the AI describes what is visible, identifies possible risks, and suggests a next step.
+**AI Processing**
 
-The output is a clearer park issue report. This report is not meant to make the final decision by itself. Park staff or trained volunteers should review the AI output first. If the output looks accurate, the report can be sent to the right service, such as cleanup, trail repair, tree assessment, invasive plant removal, or erosion control.
+- **Lab 2 structured extraction** reads the written report and returns a five-field JSON object: `location`, `issue_type`, `urgency_level`, `environmental_impact`, and `recommended_action`.
+- **Lab 3 image recognition** analyzes the uploaded image and identifies the visible environmental problem, possible public health or safety concern, urgency level, and action needed.
+
+**Output**  
+The system produces a clearer park habitat report. The report includes the location, type of issue, urgency level, environmental impact, and recommended action. This makes the report easier for park staff to understand and review.
+
+**Who Acts on It**  
+A San Jose park volunteer submits the report, but park staff or trained city workers review the AI output before taking action. The AI supports the decision. It does not make the final decision by itself.
+
 <img width="1331" height="423" alt="Screenshot 2026-05-11 at 12 01 16 AM" src="https://github.com/user-attachments/assets/38939113-247b-4e6e-9764-f30f0b43da6d" />
 
 
