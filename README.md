@@ -9,32 +9,28 @@ The specific person affected is a San Jose park volunteer walking in a local par
 
 
 # The AI capability 
-First, it uses structured data extraction from Lab 2. This helps turn a messy written report into clear fields like location, issue type, urgency level, environmental impact, and recommended action.
+My system uses two AI capabilities from the labs: structured data extraction and image recognition.
 
-Second, it uses image recognition from Lab 3. This helps analyze a photo of a park issue and identify what problem is visible, how serious it looks, and what action may be needed.
+Lab 2 uses structured data extraction. This helps the system take a messy written report and turn it into clear fields. For example, a volunteer can write, “There is a large pile of trash near the creek trail.” The AI extracts the location, issue type, urgency level, environmental impact, and recommended action. This makes the report easier to review.
 
-These capabilities fit the problem because park volunteers often report issues using both written descriptions and photos.
+Lab 3 uses image recognition. This helps the system analyze a photo of a park or trail issue. The AI can identify visible problems like trash, blocked trails, damaged land, or overgrown vegetation. It can also explain possible risks and suggest what action should happen next. These two capabilities fit the project because volunteers often report problems with both words and photos.
 
 
 # The workflow
-Input: A park volunteer submits a written report or uploads a photo of a park issue.
+The workflow starts when a San Jose park volunteer sees a problem in a park or creek trail. The volunteer either writes a short report, uploads a photo, or does both.
 
-AI step: The AI reads the text or analyzes the image. It identifies the location, issue type, urgency level, environmental impact, and recommended action.
+The AI then processes the input. If the input is text, the AI extracts structured fields such as location, issue type, urgency level, environmental impact, and recommended action. If the input is an image, the AI describes what is visible, identifies possible risks, and suggests a next step.
 
-Output: The AI creates a clearer report for park staff.
-
-Real-world action: Park staff or trained volunteers review the AI output. If the report is accurate, they send it to the right service, such as cleanup, trail repair, tree assessment, invasive plant removal, or erosion control.
+The output is a clearer park issue report. This report is not meant to make the final decision by itself. Park staff or trained volunteers should review the AI output first. If the output looks accurate, the report can be sent to the right service, such as cleanup, trail repair, tree assessment, invasive plant removal, or erosion control.
 
 
 # Failure Case 
-One failure case is when the AI sees a photo with trash and personal belongings near trees or a trail. The system may label everything as illegal dumping. But some items may belong to an unhoused person. If the AI creates a cleanup order without human review, someone’s belongings could be removed without proper support.
-
-This failure is possible because the image alone cannot always explain the full situation. The AI can identify visible objects, but it cannot fully understand the human context.
+One failure case is when the system receives an input that does not fit the purpose of the AI Park Habitat Report Assistant. For example, I tested this prompt: “I'm having a really bad day. My cat knocked over my coffee and now my laptop isn't working. What should I do?”This input is not about a park, trail, habitat issue, or environmental damage. The system was designed for park reports, so this kind of personal technology problem is outside its purpose. The test was meant to see if the AI would force the message into the park report categories anyway.The AI handled this case well. It returned “Not applicable,” “LOW” urgency, “None” for environmental impact, and “No action related to park habitat required.” This shows the system did not create a fake park issue or send the report to park staff.Assessment: Acceptable. The system rejected an unrelated input correctly. However, this does not mean the system is safe in every case. A harder failure could happen with unclear photos or reports involving trash, personal belongings, or unhoused people. In those cases, the AI may label everything as illegal dumping when the situation needs human review.
 
 
 # Oversight decision and the one change
-A human should review the AI output before any real action happens, especially for sensitive cases. This includes reports involving homelessness, personal belongings, unclear images, safety risks, or mixed categories.
+A human should review the AI output before any real action happens. This is especially important when the report involves unclear photos, possible personal belongings, homelessness, safety risks, or multiple issue types. The AI can help organize the report, but it should not make final decisions that affect people or public spaces.
 
-One change we would make is adding a “needs human review” flag. The system should flag reports when it sees possible personal belongings, unclear evidence, or multiple issue types.
+One change we would make is adding a “needs human review” flag. The system should use this flag when the AI is unsure, when the image is unclear, or when the issue may involve people’s belongings. This would help prevent the system from creating a harmful or wrong work order.
 
-The tradeoff is that this slows down the process. More reports need human review, so the system is less automated. But it reduces the chance of harming people or sending reports to the wrong department.
+The tradeoff is that this slows down the process. More reports would need a person to check them before action happens. But this tradeoff is worth it because it reduces the chance of sending reports to the wrong department or harming people who are already vulnerable.
